@@ -1,0 +1,141 @@
+package newassessment;
+
+import java.util.ArrayList;
+
+
+public class ShowRoomDetails {
+	String showrmname;
+	int showrmid;
+	
+	public int getShowrmid() {
+		return showrmid;
+	}
+	public void setShowrmid(int showrmid) {
+		this.showrmid = showrmid;
+	}
+	public String getShowrmname() {
+		return showrmname;
+	}
+	public void setShowrmname(String showrmname) {
+		this.showrmname = showrmname;
+	}
+	ArrayList<Car> cars;
+	public ArrayList<Car> getCars() {
+		return cars;
+	}
+	public void setCars(ArrayList<Car> cars) {
+		this.cars = cars;
+	}
+	ArrayList<Car> cars1;
+
+	public ArrayList<Car> getCars1() {
+		return cars1;
+	}
+	public void setCars1(ArrayList<Car> cars1) {
+		this.cars1 = cars1;
+	}
+	
+}
+................................................
+package newassessment;
+
+public class Car {
+	String carname;
+	public String getCarname() {
+		return carname;
+	}
+	public void setCarname(String carname) {
+		this.carname = carname;
+	}
+	public int getCarid() {
+		return carid;
+	}
+	public void setCarid(int carid) {
+		this.carid = carid;
+	}
+	int carid;
+	/**
+	 * @param carname
+	 * @param carid
+	 */
+	
+	public Car(String carname, int carid) {
+        super();
+		this.carname = carname;
+		this.carid = carid;
+	}}
+	
+	.....................................................................
+  
+  
+  package newassessment;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import com.nextsect.Student;
+
+public class ShowRoomService {
+	
+	
+		public static void main(String[] args) {
+			
+			
+			Car cr1=new Car("Ford",586643);
+			Car cr2=new Car("Ferari",586644);
+			ShowRoomDetails aut=new ShowRoomDetails();
+			
+			aut.setShowrmname("Bhav");
+			
+			
+			ArrayList<Car> cars=new ArrayList<>();
+			cars.add(cr1);
+			cars.add(cr2);
+			aut.setCars(cars);
+			
+			System.out.println(aut.getShowrmname());
+		
+			
+			System.out.println(" --------- ");
+			
+			Car cr3=new Car("Tata",586643);
+			Car cr4=new Car("Ferari",586644);
+			ShowRoomDetails aut2=new ShowRoomDetails();
+			
+			aut2.setShowrmname("Bhao");
+			
+			
+			ArrayList<Car> cars1=new ArrayList<>();
+			cars1.add(cr3);
+			cars1.add(cr4);
+			aut2.setCars(cars1);
+			
+			System.out.println(aut2.getShowrmname());
+		
+			
+			System.out.println(" --------- ");
+			
+			//ArrayList<Car> adr= aut.getCars();
+		ArrayList<Car> adr1= aut2.getCars();
+			for(Car d:adr1)
+			{
+			System.out.println(d.getCarid() +" "+ d.getCarname() );
+
+			}
+			
+			HashMap<String,ShowRoomDetails> crs=new HashMap();
+			crs.put(aut2.getShowrmname(), aut2);
+			System.out.println("-----------------------");
+			
+			//ShowRoomDetails c1 =crs.get("Bhav");
+			
+			
+			ShowRoomDetails c2 =crs.get("Bhao");
+			System.out.println(c2);
+			
+			
+			
+			
+			
+		}
+			
+		}
